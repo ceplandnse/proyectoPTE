@@ -12,6 +12,9 @@ Organización
 
 Dirección Nacional de Seguimiento y Evaluación - CEPLAN
 
-Contacto
+Contactos para consultas
 
-Correos: fsantacruz@locador.ceplan.gob.pe // aronsantacruz95@gmail.com
+Correos:
+- arivadeneira@ceplan.gob.pe
+- mhuaman@ceplan.gob.pe
+- fsantacruz@locador.ceplan.gob.pe
