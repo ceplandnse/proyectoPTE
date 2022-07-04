@@ -8,8 +8,10 @@ Instrucciones
 
 En la carpeta "2_códigos" se encuentran enumerados, según orden de ejecución, los códigos que permiten scrapear la información del PTE. Para su uso, se recomienda descargar todo el repositorio "proyectoPTE" y modificar únicamente la zona titulada "MODIFICABLE" dentro del script.
 
+Organización
+
+Dirección Nacional de Seguimiento y Evaluación - CEPLAN
+
 Contacto
 
-Autor: Aron Santa Cruz
-Correo: fsantacruz@locador.ceplan.gob.pe // aronsantacruz95@gmail.com
-Organización: Dirección Nacional de Seguimiento y Evaluación - CEPLAN
+Correos: fsantacruz@locador.ceplan.gob.pe // aronsantacruz95@gmail.com
