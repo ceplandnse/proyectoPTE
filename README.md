@@ -6,7 +6,7 @@ El repositorio tiene como fin obtener información sistematizada del [Portal de 
 
 ## Instrucciones
 
-En la carpeta "2_códigos" se encuentran enumerados, según orden de ejecución, los códigos que permiten scrapear la información del PTE. Para su uso, se recomienda descargar todo el repositorio "proyectoPTE" y modificar únicamente la zona titulada "MODIFICABLE" dentro del script.
+En la carpeta "2_códigos" se encuentran enumerados, según orden de ejecución, los códigos que permiten scrapear la información del PTE. Para su uso, se recomienda descargar todo el repositorio "proyectoPTE" y modificar únicamente las rutas y fechas que se encuentran en la zona "MODIFICABLE" dentro de cada script.
 
 ## Organización
 
