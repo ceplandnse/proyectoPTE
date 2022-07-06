@@ -26,6 +26,9 @@ d1 = today.strftime("%d_%m_%Y")
 #
 # ruta de salida
 PATH_OUTPUT = 'C:/Users/ARON SANTA CRUZ/Documents/ceplan/github/proyectoPTE/1_data/2_scrap/'
+#
+# ----------------------------------------------- #
+
 # nombre del archivo
 FILE_OUTPUT = 'ID_ENTIDAD_CORRELATIVO_{}.xlsx'.format(d1)
 # id inicio
@@ -34,8 +37,6 @@ ID_INICIO = 0
 ID_FINAL = 39999
 # tiempo de espera para cargar URL
 timeout=10
-#
-# ----------------- MODIFICABLE ----------------- #
 
 BBDD = pd.DataFrame() # se crea dataframe vacía para almacenar info
 # bucle 'for' para el rango de correlativo definido
