@@ -24,12 +24,13 @@ start = time.time() # inicia toma de tiempo
 PATH_INSIDE = 'C:/Users/ARON SANTA CRUZ/Documents/ceplan/github/proyectoPTE/1_data/1_interna/'
 # ruta de data scrap
 PATH_INPUT = 'C:/Users/ARON SANTA CRUZ/Documents/ceplan/github/proyectoPTE/1_data/2_scrap/'
+#
+# ----------------------------------------------- #
+
 # nombre del archivo
 FILE_OUTPUT = 'ID_ENTIDAD_SECEJEC.xlsx'
 # tiempo de espera para cargar URL
 timeout=10
-#
-# ----------------- MODIFICABLE ----------------- #
 
 BBDD = pd.DataFrame() # se crea dataframe vacía para almacenar info
 file_xlsx = PATH_INPUT + 'ID_ENTIDAD_TOTAL.xlsx' # ruta y nombre de listado id_entidad
