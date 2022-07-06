@@ -26,10 +26,11 @@ PATH_INPUT = 'C:/Users/ARON SANTA CRUZ/Documents/ceplan/github/proyectoPTE/1_dat
 PATH_RESULT = 'C:/Users/ARON SANTA CRUZ/Documents/ceplan/github/proyectoPTE/3_resultados/'
 # fecha de planes y politicas
 FECHA_PyP = '01_07_2022'
+#
+# ----------------------------------------------- #
+
 # nombre del archivo
 FILE_OUTPUT = 'PLANES_POLITICAS_'+FECHA_PyP+'.xlsx'
-#
-# ----------------- MODIFICABLE ----------------- #
 
 # lee el excel
 df_pp=pd.read_excel(PATH_INPUT+'PyP_'+FECHA_PyP+'.xlsx') # planes y políticas
