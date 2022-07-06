@@ -22,7 +22,7 @@ start = time.time() # inicia toma de tiempo
 today = date.today() # graba día de hoy
 d1 = today.strftime("%d_%m_%Y") # da formato
 
-# ----------------- MODIFICABLE
+# ----------------- MODIFICABLE ------------------#
 #
 # ruta de data scrap
 PATH_INPUT = 'C:/Users/ARON SANTA CRUZ/Documents/ceplan/github/proyectoPTE/1_data/2_scrap/'
@@ -31,7 +31,7 @@ FILE_OUTPUT = 'PyP_{}.xlsx'.format(d1)
 # tiempo de espera para cargar URL
 timeout=10
 #
-# -----------------------------
+# ----------------------------------------------- #
 
 BBDD = pd.DataFrame() # se crea dataframe vacía para almacenar info
 file_xlsx = PATH_INPUT + 'ID_ENTIDAD_TOTAL.xlsx' # ruta y nombre de listado id_entidad
