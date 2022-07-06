@@ -25,10 +25,11 @@ PATH_INSIDE = 'C:/Users/ARON SANTA CRUZ/Documents/ceplan/github/proyectoPTE/1_da
 PATH_INPUT = 'C:/Users/ARON SANTA CRUZ/Documents/ceplan/github/proyectoPTE/1_data/2_scrap/'
 # ruta de resultados
 PATH_RESULT = 'C:/Users/ARON SANTA CRUZ/Documents/ceplan/github/proyectoPTE/3_resultados/'
+#
+# ----------------------------------------------- #
+
 # nombre del archivo
 FILE_OUTPUT = 'ID_ENTIDAD_TOTAL.xlsx'
-#
-# ----------------- MODIFICABLE ----------------- #
 
 # lee el excel con el listado id_entidad
 df_listas=pd.read_excel(PATH_INPUT+'ID_ENTIDAD_LISTAS_21_06_2022.xlsx')
