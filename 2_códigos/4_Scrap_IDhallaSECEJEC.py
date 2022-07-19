@@ -24,13 +24,13 @@ start = time.time() # inicia toma de tiempo
 PATH_INSIDE = 'C:/Users/ARON SANTA CRUZ/Documents/ceplan/github/proyectoPTE/1_data/1_interna/'
 # ruta de data scrap
 PATH_INPUT = 'C:/Users/ARON SANTA CRUZ/Documents/ceplan/github/proyectoPTE/1_data/2_scrap/'
+# tiempo de espera para cargar URL
+timeout=10
 #
 # ----------------------------------------------- #
 
 # nombre del archivo
 FILE_OUTPUT = 'ID_ENTIDAD_SECEJEC.xlsx'
-# tiempo de espera para cargar URL
-timeout=10
 
 BBDD = pd.DataFrame() # se crea dataframe vacía para almacenar info
 file_xlsx = PATH_INPUT + 'ID_ENTIDAD_TOTAL.xlsx' # ruta y nombre de listado id_entidad
@@ -82,6 +82,95 @@ for entidad in entidades:
     df1 = pd.DataFrame(list(zip(id_entidad,sec_ejec)),columns=['id_entidad','sec_ejec'])
     BBDD = BBDD.append(df1) # se apendea todo lo guardado a la BBDD
 BBDD['sec_ejec'] = BBDD['sec_ejec'].astype('int') # transforma a entero el string
+
+#revisar en unos meses para determinar si siguen sin tener info de sec_ejec
+#estos son los casos en los que no tenía información de sec_ejec o, si lo tenía, no identificaba a ninguna UE
+BBDD.loc[(BBDD['id_entidad']=="10197"),'sec_ejec']=12
+BBDD.loc[(BBDD['id_entidad']=="10198"),'sec_ejec']=1471
+BBDD.loc[(BBDD['id_entidad']=="10201"),'sec_ejec']=1703
+BBDD.loc[(BBDD['id_entidad']=="10204"),'sec_ejec']=1699
+BBDD.loc[(BBDD['id_entidad']=="10205"),'sec_ejec']=1472
+BBDD.loc[(BBDD['id_entidad']=="10208"),'sec_ejec']=1465
+BBDD.loc[(BBDD['id_entidad']=="10212"),'sec_ejec']=1469
+BBDD.loc[(BBDD['id_entidad']=="10213"),'sec_ejec']=1702
+BBDD.loc[(BBDD['id_entidad']=="10231"),'sec_ejec']=1474
+BBDD.loc[(BBDD['id_entidad']=="10233"),'sec_ejec']=12
+BBDD.loc[(BBDD['id_entidad']=="10242"),'sec_ejec']=1704
+BBDD.loc[(BBDD['id_entidad']=="10600"),'sec_ejec']=301313
+BBDD.loc[(BBDD['id_entidad']=="10808"),'sec_ejec']=300550
+BBDD.loc[(BBDD['id_entidad']=="11021"),'sec_ejec']=300754
+BBDD.loc[(BBDD['id_entidad']=="11095"),'sec_ejec']=301017
+BBDD.loc[(BBDD['id_entidad']=="12886"),'sec_ejec']=1288
+BBDD.loc[(BBDD['id_entidad']=="13289"),'sec_ejec']=875
+BBDD.loc[(BBDD['id_entidad']=="13296"),'sec_ejec']=1686
+BBDD.loc[(BBDD['id_entidad']=="13362"),'sec_ejec']=12
+BBDD.loc[(BBDD['id_entidad']=="13363"),'sec_ejec']=12
+BBDD.loc[(BBDD['id_entidad']=="13648"),'sec_ejec']=810
+BBDD.loc[(BBDD['id_entidad']=="13734"),'sec_ejec']=1210
+BBDD.loc[(BBDD['id_entidad']=="13753"),'sec_ejec']=869
+BBDD.loc[(BBDD['id_entidad']=="13830"),'sec_ejec']=892
+BBDD.loc[(BBDD['id_entidad']=="13843"),'sec_ejec']=818
+BBDD.loc[(BBDD['id_entidad']=="13992"),'sec_ejec']=1683
+BBDD.loc[(BBDD['id_entidad']=="14060"),'sec_ejec']=892
+BBDD.loc[(BBDD['id_entidad']=="14062"),'sec_ejec']=892
+BBDD.loc[(BBDD['id_entidad']=="14214"),'sec_ejec']=921
+BBDD.loc[(BBDD['id_entidad']=="14250"),'sec_ejec']=1398
+BBDD.loc[(BBDD['id_entidad']=="14278"),'sec_ejec']=1684
+BBDD.loc[(BBDD['id_entidad']=="14280"),'sec_ejec']=1404
+BBDD.loc[(BBDD['id_entidad']=="14287"),'sec_ejec']=1395
+BBDD.loc[(BBDD['id_entidad']=="14307"),'sec_ejec']=1375
+BBDD.loc[(BBDD['id_entidad']=="15325"),'sec_ejec']=1517
+BBDD.loc[(BBDD['id_entidad']=="15326"),'sec_ejec']=1403
+BBDD.loc[(BBDD['id_entidad']=="15331"),'sec_ejec']=1513
+BBDD.loc[(BBDD['id_entidad']=="15346"),'sec_ejec']=988
+BBDD.loc[(BBDD['id_entidad']=="15350"),'sec_ejec']=1378
+BBDD.loc[(BBDD['id_entidad']=="15353"),'sec_ejec']=1643
+BBDD.loc[(BBDD['id_entidad']=="15354"),'sec_ejec']=1493
+BBDD.loc[(BBDD['id_entidad']=="16358"),'sec_ejec']=1618
+BBDD.loc[(BBDD['id_entidad']=="16364"),'sec_ejec']=1308
+BBDD.loc[(BBDD['id_entidad']=="16374"),'sec_ejec']=1483
+BBDD.loc[(BBDD['id_entidad']=="16383"),'sec_ejec']=1524
+BBDD.loc[(BBDD['id_entidad']=="16399"),'sec_ejec']=1505
+BBDD.loc[(BBDD['id_entidad']=="17400"),'sec_ejec']=1339
+BBDD.loc[(BBDD['id_entidad']=="17409"),'sec_ejec']=1537
+BBDD.loc[(BBDD['id_entidad']=="17415"),'sec_ejec']=896
+BBDD.loc[(BBDD['id_entidad']=="17504"),'sec_ejec']=1377
+BBDD.loc[(BBDD['id_entidad']=="17506"),'sec_ejec']=1386
+BBDD.loc[(BBDD['id_entidad']=="18611"),'sec_ejec']=1434
+BBDD.loc[(BBDD['id_entidad']=="18612"),'sec_ejec']=1248
+BBDD.loc[(BBDD['id_entidad']=="18613"),'sec_ejec']=1610
+BBDD.loc[(BBDD['id_entidad']=="18617"),'sec_ejec']=1686
+BBDD.loc[(BBDD['id_entidad']=="18624"),'sec_ejec']=1518
+BBDD.loc[(BBDD['id_entidad']=="18632"),'sec_ejec']=1436
+BBDD.loc[(BBDD['id_entidad']=="18659"),'sec_ejec']=1600
+BBDD.loc[(BBDD['id_entidad']=="18664"),'sec_ejec']=301284
+BBDD.loc[(BBDD['id_entidad']=="18667"),'sec_ejec']=1355
+BBDD.loc[(BBDD['id_entidad']=="18673"),'sec_ejec']=1525
+BBDD.loc[(BBDD['id_entidad']=="18674"),'sec_ejec']=1599
+BBDD.loc[(BBDD['id_entidad']=="18675"),'sec_ejec']=1656
+BBDD.loc[(BBDD['id_entidad']=="18684"),'sec_ejec']=934
+BBDD.loc[(BBDD['id_entidad']=="18689"),'sec_ejec']=724
+BBDD.loc[(BBDD['id_entidad']=="18691"),'sec_ejec']=1676
+BBDD.loc[(BBDD['id_entidad']=="18692"),'sec_ejec']=1538
+BBDD.loc[(BBDD['id_entidad']=="18708"),'sec_ejec']=1523
+BBDD.loc[(BBDD['id_entidad']=="18721"),'sec_ejec']=1353
+BBDD.loc[(BBDD['id_entidad']=="18730"),'sec_ejec']=1606
+BBDD.loc[(BBDD['id_entidad']=="18734"),'sec_ejec']=1379
+BBDD.loc[(BBDD['id_entidad']=="18786"),'sec_ejec']=301884
+BBDD.loc[(BBDD['id_entidad']=="18818"),'sec_ejec']=1701
+BBDD.loc[(BBDD['id_entidad']=="18823"),'sec_ejec']=1440
+BBDD.loc[(BBDD['id_entidad']=="18827"),'sec_ejec']=1540
+BBDD.loc[(BBDD['id_entidad']=="18837"),'sec_ejec']=1542
+BBDD.loc[(BBDD['id_entidad']=="18840"),'sec_ejec']=1453
+BBDD.loc[(BBDD['id_entidad']=="18849"),'sec_ejec']=1325
+BBDD.loc[(BBDD['id_entidad']=="18854"),'sec_ejec']=1325
+BBDD.loc[(BBDD['id_entidad']=="19857"),'sec_ejec']=1726
+BBDD.loc[(BBDD['id_entidad']=="19858"),'sec_ejec']=1348
+BBDD.loc[(BBDD['id_entidad']=="22865"),'sec_ejec']=1514
+BBDD.loc[(BBDD['id_entidad']=="22869"),'sec_ejec']=1718
+BBDD.loc[(BBDD['id_entidad']=="26886"),'sec_ejec']=1387
+BBDD.loc[(BBDD['id_entidad']=="35906"),'sec_ejec']=1389
+
 df_UE=pd.read_excel(PATH_INSIDE+'UE_SIAF_2022_al_06.06.2022.xlsx',sheet_name='UE') # lee el excel con info UE
 df_UE=df_UE.rename(columns={'EJECUTORA':'sec_ejec'}) # renombra columna sec_ejec
 df_final=pd.merge(BBDD, df_UE, on=["sec_ejec"], how='left') # merge entre data frames
